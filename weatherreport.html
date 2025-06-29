@@ -35,8 +35,17 @@
           const response - await fetch('/submit', {
             method: 'POST',
             headers: {
-              
-        }
+              'Content-Type': 'application/json'
+        },
+
+        if (response.ok) {
+          document.getElementById('responseMesssage').textContent = "Weather reported submitted.";
+        } else {
+            document.GetElementById('responseMessage').textContent = "Error submitting report.";
+          }
+        } catch (error) {
+          document.GetElementById('responseMessage').textContent = "Network error.";
+          
           
         
     </script>
