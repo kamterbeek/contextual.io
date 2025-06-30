@@ -1,1 +1,35 @@
+{
+  "primaryKey": "id",
+  "type": "object",
+  "$comment": "Schema representing a weather report",
+  "properties": {
+    "id": {
+      "type": "string",
+      "generate": {
+        "type": "uuid",
+        "format": "short"
+      }
+    },
+    "datetime": {
+      "type": "string",
+      "generate": {
+        "type": "datetime"
+      },
+      "$comment": "The date and time when the weather report was generated"
+    },
+    "temperature": {
+      "type": "number",
+      "description": "Temperature recorded in degrees"
+    },
+    "stationId": {
+      "type": "string",
+      "$comment": "Identifier for the weather reporting station"
+    }
+  },
+  "$commentRequired": "Temperature and station ID are mandatory for instances of this Object Type",
+  "required": [
+    "temperature",
+    "stationId"
+  ]
+}
 
