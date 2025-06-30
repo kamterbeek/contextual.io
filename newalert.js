@@ -1,4 +1,3 @@
-
 msg.newAlert = {
   type: msg.alertType,
   description: msg.alertDescription,
